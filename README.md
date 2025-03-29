@@ -7,7 +7,9 @@ We’re building a Browser Security Extension that helps block malicious website
 🔹 Project Overview
 
 ✅ Create a Chrome Extension that monitors URLs.
+
 ✅ Block access to malicious websites based on a predefined list.
+
 ✅ Use JavaScript, Manifest V3, and Chrome Extension APIs.
 
 ---
@@ -15,6 +17,7 @@ We’re building a Browser Security Extension that helps block malicious website
 🔹 Step 1: Set Up Your Project Folder
 
 1️⃣ Create a folder named browser-security-extension.
+
 2️⃣ Inside the folder, create these files:
 
 manifest.json → Extension configuration
@@ -40,8 +43,11 @@ Create manifest.json and add the code.
 Explanation:  
 
 ✅ manifest_version: Chrome uses version 3.
+
 ✅ permissions: Access to web requests, storage, and tabs.
+
 ✅ background: Runs background.js as a service worker.
+
 ✅ action: Adds a popup UI for users to manage settings.
 
 ---
@@ -53,7 +59,9 @@ Create background.js and add the code.
 Explanation:
 
 ✅ blockedSites: Stores a list of malicious domains.
+
 ✅ onBeforeRequest: Listens for network requests.
+
 ✅ Blocks access if a request matches a blocked domain.
 
 ---
@@ -65,7 +73,9 @@ Create popup.html and add the code.
 Explanation:
 
 ✅ Input field → Allows users to add sites to the block list.
+
 ✅ Button → Blocks the entered site.
+
 ✅ List (ul) → Shows blocked sites.
 
 ---
@@ -77,7 +87,9 @@ Create popup.js and add the code.
 Explanation:
 
 ✅ Stores blocked sites in Chrome’s local storage.
+
 ✅ Displays the list of blocked sites in the popup.
+
 ✅ Updates background.js whenever a new site is added.
 
 ---
@@ -108,8 +120,11 @@ Find a small PNG icon (128x128px) and save it as icon.png in your project folder
 🔹 Step 9: Load the Extension in Chrome
 
 1️⃣ Open Chrome and go to chrome://extensions/.
+
 2️⃣ Enable Developer Mode (toggle in the top-right).
+
 3️⃣ Click "Load unpacked" and select your browser-security-extension folder.
+
 4️⃣ The extension should now appear in Chrome!
 
 ---
@@ -117,7 +132,9 @@ Find a small PNG icon (128x128px) and save it as icon.png in your project folder
 🔹 Step 10: Test Your Extension
 
 1️⃣ Click the extension icon → Enter facebook.com → Click Block.
+
 2️⃣ Try opening facebook.com → It should be blocked!
+
 3️⃣ Manage the blocked sites from the popup UI.
 
 ---
@@ -125,7 +142,9 @@ Find a small PNG icon (128x128px) and save it as icon.png in your project folder
 🔹 Next Steps
 
 ✅ Improve UI (better design, dark mode).
+
 ✅ Add an "Unblock" feature.
+
 ✅ Use an online threat database (like PhishTank) to detect threats.
 
 ---
